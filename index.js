@@ -40,9 +40,10 @@ const headers = {
 const httpsAgent = new https.Agent({ keepAlive: true });
 
 const upsertUser = async ({ user }) => {
-  const { mappings = [] } = config;
+  const { mappings } = config;
+  const mappingsToUse = mappings || [];
   // Update body from config mappings
-  const body = mappings.reduce((acc, mapping) => {
+  const body = mappingsToUse.reduce((acc, mapping) => {
     const { from, to } = mapping; 
     if (acc[from]) {
       delete Object.assign(acc, { [to]: acc[from] })[from];
