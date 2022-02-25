@@ -1,0 +1,15 @@
+{
+  "name": "customer-cli",
+  "version": "1.0.0",
+  "description": "Tool to sync user data from local files to the Customer.io API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anna Pojawis",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "3.7.2",
+    "node-fetch": "2.6.7"
+  }
+}
